@@ -26,6 +26,6 @@ app.get('/api/squirtle', (request, response) => {
     response.json(squirtle)
 })
 
-app.listen(PORT, () =>{
+app.listen(process.env.POR || PORT, () =>{
     console.log(`Server running on port ${PORT}`)
 })
