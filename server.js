@@ -19,17 +19,16 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('.'));
-app.set('view engine','ejs')
+// app.set('view engine','ejs')
 
 
 // Read request for loading main page with HTML/EJS
 app.get('/', (request, response) => {
     db.collection('MovieWatchlist').find().toArray()
     .then (data => {
-        response.render('/views/index.ejs', {info: data})
+        response.render('index.ejs', {info: data})
     })
     .catch(error => console.error(error))
-    response.sendFile(__dirname + '/views/index.html')
 })
 
 //Post to create 
@@ -38,17 +37,21 @@ app.post('/addMovie', (request,response) => {
     .then (result => {
         console.log('Movie Added')
         response.redirect('/')
-    })})
+    })
+    .catch(error => console.error(error))
+})
 
 //Delete
 app.delete('/deleteMovie', (request,response) => {
-    db.collection('MovieCollection').deleteOne({movieName: request.body.movieName})
+    db.collection('MovieWatchlist').deleteOne({movieName: request.body.movieNameS})
+    // movieNameS is used in main.js deleteMovie()
     .then (result => {
         console.log('Movie Deleted')
         response.json("Movie Deleted")
     })
     .catch(errpr => console.error(error))
 })
+
 app.listen(process.env.PORT || PORT, () =>{
     console.log(`Server running on port ${PORT}`)
 })
