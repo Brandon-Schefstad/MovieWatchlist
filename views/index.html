@@ -10,7 +10,7 @@
     <h1>Movie Watchlist!</h1>
     <section>
     <form action="/addMovie" method="POST">
-        <input type="text" placeholder="Movie Name" name="movieName">
+        <input type="text" placeholder="Movie Name">
     </form>
     <label for="importance">How Important?</label>
     <select name="weight" id="importance"> 
@@ -28,15 +28,6 @@
     </select>
     <button id="submit">Submit</button>
 </section>
-<ul class="movies">
-    <% for (let i=0; i < info.length; i++){%>
-        <li class="movie">
-            <span><%= info[i].movieName %></span>
-            <span><%= info[i].importance %></span>
-            <span class="del">delete</span>
-        </li>
-        <% } %>
-</ul>
 </body>
     <script type="text/javascript" src="/public/js/main.js"></script>
 
