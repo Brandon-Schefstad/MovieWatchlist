@@ -7,39 +7,42 @@
     <title>Document</title>
 </head>
 <body>
+    <section>
     <h1>Movie Watchlist!</h1>
+    <section>
+        <form action="/addMovie" method="POST">
+            <input type="text" placeholder="Movie Name" name="movieName">
+            <input type="number" placeholder="How Important?" min="0" max="5" name="importance">
+            <input type="submit">
+            <!-- <select name="weight" id="importance" name="importance"> 
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select> -->
+        </form>
+        <!-- <label for="importance">How Important?</label> -->
+    
+       
+    </section>
+   
     <ul class="movies">
         <% for (let i=0; i < info.length; i++){%>
             <li class="movie">
-                <span class="name"><%= info[i].movieName %></span> <span>- Rating:</span>
-                <span><%= info[i].importance %></span>
+                <span class="name"><%= info[i].movieName %></span> 
+                <span>Rating: <%= info[i].importance %></span>
                 <span class="del">delete</span>
             </li>
             <% } %>
     </ul>
-    <section>
-    <form action="/addMovie" method="POST">
-        <input type="text" placeholder="Movie Name" name="movieName">
-        <input type="number" placeholder="How Important?" min="0" max="5" name="importance">
-        <input type="submit">
-        <!-- <select name="weight" id="importance" name="importance"> 
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select> -->
-    </form>
-    <!-- <label for="importance">How Important?</label> -->
-
    
-</section>
 
 </body>
     <script type="text/javascript" src="public/js/main.js"></script>

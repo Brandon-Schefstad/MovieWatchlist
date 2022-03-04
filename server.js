@@ -24,7 +24,7 @@ app.set('view engine','ejs')
 
 // Read request for loading main page with HTML/EJS
 app.get('/', (request, response) => {
-    db.collection('MovieWatchlist').find().toArray()
+    db.collection('MovieWatchlist').find().sort({importance: -1}).toArray()
     .then (data => {
         response.render('index.ejs', {info: data})
     })
