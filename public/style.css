@@ -6,14 +6,21 @@
 *{
     box-sizing: border-box;
   }
-  
-
 body{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
-    justify-content: center;
+    align-items: center;
     background-color: rgb(13, 13, 24);
+
+}
+body>section{
+    background-color: rgb(121, 77, 51);
+    border: 3px solid goldenrod;
+    width: 60%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
 }
 h1{
     display: flex;
@@ -26,29 +33,22 @@ form{
     display:flex;
     justify-content: center;
 }
-body>section{
-    background-color: rgb(121, 77, 51);
-    border: 3px solid goldenrod;
-    width:60%;
-    flex-direction: column;
-    align-content: center;
-}
-h1>section{
-    width:37%;
-    display:flex;
-    justify-content: center;
-    margin-left:1%;
+h1+section+section{
+    
 }
 ul{
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    width: 94%;
 }
-.del {
-    border: 0.5px solid black;
-    background-color: rgb(88, 87, 19);
-    color: azure;
-    margin-left: 5%;
+li{
+    border: 0.5px solid rgb(39, 50, 75);
+    background-color: rgb(177, 150, 62);
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    margin-bottom: 1%;
 }
 .name, span{
     color: rgba(48, 46, 16, 0.856);
@@ -57,20 +57,14 @@ ul{
     text-decoration: underline;
     text-shadow: 1em;
 }
-
-
-li{
-    border: 0.5px solid rgb(39, 50, 75);
-    background-color: rgb(177, 150, 62);
-    display: flex;
-    justify-content: space-around;
-    width: 73%;
-    height:15%;
+.del {
+    border: 0.5px solid black;
+    background-color: rgb(88, 87, 19);
+    color: azure;
+    margin-left: 1%;
+    height: fit-content;
+    padding: 0 2px 0 2px;
 }
-li+span{
-    justify-self: right;
 }
 
-ul>section{
-    color:black;
-}
+

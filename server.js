@@ -49,7 +49,7 @@ app.delete('/deleteMovie', (request,response) => {
         console.log('Movie Deleted')
         response.json("Movie Deleted")
     })
-    .catch(errpr => console.error(error))
+    .catch(error => console.error(error))
 })
 
 app.listen(process.env.PORT || PORT, () =>{

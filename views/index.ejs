@@ -32,7 +32,7 @@
     
        
     </section>
-   
+   <section>
     <ul class="movies">
         <% for (let i=0; i < info.length; i++){%>
             <li class="movie">
@@ -40,9 +40,10 @@
                 <span>Rating: <%= info[i].importance %></span>
                 <span class="del">delete</span>
             </li>
+
             <% } %>
     </ul>
-   
+    </section>
 
 </body>
     <script type="text/javascript" src="public/js/main.js"></script>
