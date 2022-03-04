@@ -19,7 +19,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('.'));
-// app.set('view engine','ejs')
+app.set('view engine','ejs')
 
 
 // Read request for loading main page with HTML/EJS
