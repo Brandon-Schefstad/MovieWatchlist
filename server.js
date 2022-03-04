@@ -52,6 +52,17 @@ app.delete('/deleteMovie', (request,response) => {
     .catch(error => console.error(error))
 })
 
+//Post request to update checkboxes
+app.put ('/checkbox', (request, response) => {
+    db.collection('MovieWatchlist').updateOne({movieName: request.body.movieNameS}, {
+        $set: {
+            checkbox: request.body.checkbox.checked
+        }
+    })
+})
+
+
+//Ports
 app.listen(process.env.PORT || PORT, () =>{
     console.log(`Server running on port ${PORT}`)
 })

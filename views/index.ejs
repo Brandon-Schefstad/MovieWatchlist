@@ -12,6 +12,7 @@
         <form action="/addMovie" method="POST">
             <input type="text" placeholder="Movie Name" name="movieName">
             <input type="number" placeholder="How Important?" min="0" max="5" name="importance">
+            <!-- <input type="checkbox" name="checkbox" id=""> -->
             <input type="submit">
         </form>
     <ul class="movies">
@@ -19,7 +20,8 @@
             <li class="movie">
                 <span class="name"><%= info[i].movieName %></span> 
                 <span class="rating">:   Rating - <%= info[i].importance %></span>
-                <button class="del">Delete</button>
+                <input type="checkbox" id="checkbox" name ="checkbox"><%= info[i].checkbox %>
+                <span class="del">Delete</span>
             </li>
             <% } %>
     </ul>

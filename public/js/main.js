@@ -1,8 +1,11 @@
+// const { response } = require("express")
+
 const deleteText = document.querySelectorAll('.del')
 
 Array.from(deleteText).forEach((element) =>{
     element.addEventListener('click', deleteMovie)
 })
+
 // Delete or DELETE /info
 async function deleteMovie(){
     const mName = this.parentNode.childNodes[1].innerText
@@ -27,3 +30,26 @@ async function deleteMovie(){
 }
 // Update or PUT /info 
 // Create or POST /addmovie
+
+// const checkbox = document.querySelectorAll('#checkbox')
+// Array.from(checkbox).forEach((element) =>{
+//     element.addEventListener('click', seen)
+// })
+
+// async function seen () {
+//     const checked = this.checked
+//     try{
+//         const response = await fetch ('checkbox', {
+//             method: 'put',
+//             headers: {'Content-Type': 'application/json'},
+//             body: JSON.stringify({
+//                 'checkbox': checked,
+//             })
+//         })
+//     const data = await response.json()
+//     console.log(data)
+//     location.reload()
+//     }catch {
+//         error 
+//     }
+// }
