@@ -30,13 +30,15 @@ async function deleteMovie(){
 // Update or PUT /info 
 // Create or POST /addmovie
 
-// PUT function not working, eventlistener not activating. 
+// PUT function not working, eventlistener not activating on click but by default. 
 
-// const checkboxes = document.querySelector('checkbox')
-// Array.from(checkboxes).forEach((element) =>{
-//     element.addEventListener('click', alert("Clicked!"))
-// })
-
+const seen = document.querySelector('.seen')
+Array.from(seen).forEach((element) =>{
+    element.addEventListener('click', alert)
+})
+async function alert() {
+    console.log('works!')
+}
 // async function seen() {
 //     console.log("started")
 //     const checked = this.checked

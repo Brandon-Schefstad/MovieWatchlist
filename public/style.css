@@ -54,8 +54,9 @@ li{
 .name {
     text-decoration: underline;
 }
-.del {
-    border: 2px solid #023047;
+.del, .seen {
+    display:inline-block;
+    border: 1.5px solid #023047;
     background-color: #CC6D00;
     color:#344E41;
     color: azure;
@@ -63,6 +64,10 @@ li{
     align-self: flex-end;
     height: fit-content;
 }
-
-
+.notSeen{
+    color:red
+}
+.seen{
+    background-color: #00cc66;
+}
 
