@@ -4,9 +4,10 @@ const app = express()
 const cors = require('cors')
 const PORT = 8000
 const MongoClient = require('mongodb').MongoClient
+// require('dotenv').config()
 
 let db,
-    dbConnectionStr = "mongodb+srv://AthenasHelm:DQjmKN5PMzpUJW3@moviewatchlist.lgpbg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    dbConnectionStr = process.env.DB_STRING,
     dbName = "MovieWatchlist"
 
 MongoClient.connect(dbConnectionStr, {useUnifiedTopology:true})

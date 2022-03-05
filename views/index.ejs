@@ -13,13 +13,13 @@
             <input type="text" placeholder="Movie Name" name="movieName">
             <input type="number" placeholder="How Important?" min="0" max="5" name="importance">
             <!-- <input type="checkbox" name="checkbox" id=""> -->
-            <input type="submit">
+            <input type="submit" value="Submit">
         </form>
     <ul class="movies">
         <% for (let i=0; i < info.length; i++){%>
             <li class="movie">
                 <span class="name"><%= info[i].movieName %></span> 
-                <span class="rating">:   Rating - <%= info[i].importance %></span>
+                <span class="rating">-   Priority: <%= info[i].importance %></span>
                 <input type="checkbox" class="checkbox" name ="checkbox">
                 <span class="del">Delete</span>
             </li>
