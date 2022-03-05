@@ -33,7 +33,7 @@ app.get('/', (request, response) => {
 
 //Post to create 
 app.post('/addMovie', (request,response) => {
-    db.collection('MovieWatchlist').insertOne(request.body)
+    db.collection('MovieWatchlist').insertOne({"movieName": request.body.movieName, "importance":request.body.importance, checkbox: "Not Seen"})
     .then (result => {
         console.log('Movie Added')
         response.redirect('/')

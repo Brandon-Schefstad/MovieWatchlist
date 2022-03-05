@@ -11,14 +11,15 @@ body{
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    background-color: rgb(13, 13, 24);
+    background-color: #023047;
 
 }
 body>section{
-    background-color: rgb(121, 77, 51);
-    border: 3px solid goldenrod;
+    background-color: #219EBC;
+    border: 3px solid #CC6D00;
     width: 60%;
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     flex-direction: column;
 }
@@ -26,11 +27,12 @@ h1{
     display: flex;
     justify-content: center;
     font-size: 165%;
-    color:rgba(37, 33, 28, 0.945);
+    color:#063E56;
     text-decoration: underline;
 }
 form{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 ul{
@@ -40,8 +42,8 @@ ul{
     width: 94%;
 }
 li{
-    border: 0.5px solid rgb(39, 50, 75);
-    background-color: rgb(177, 150, 62);
+    border: 2px solid #344E41;
+    background-color: #ABD8ED;
     justify-content: flex-start;
     width: 76%;
     margin-bottom: 1%;
@@ -53,8 +55,9 @@ li{
     text-decoration: underline;
 }
 .del {
-    border: 0.5px solid black;
-    background-color: rgb(88, 87, 19);
+    border: 2px solid #023047;
+    background-color: #CC6D00;
+    color:#344E41;
     color: azure;
     margin-left: 1%;
     align-self: flex-end;

@@ -1,7 +1,6 @@
 // const { response } = require("express")
 
 const deleteText = document.querySelectorAll('.del')
-
 Array.from(deleteText).forEach((element) =>{
     element.addEventListener('click', deleteMovie)
 })
@@ -31,12 +30,15 @@ async function deleteMovie(){
 // Update or PUT /info 
 // Create or POST /addmovie
 
-// const checkbox = document.querySelectorAll('#checkbox')
-// Array.from(checkbox).forEach((element) =>{
-//     element.addEventListener('click', seen)
+// PUT function not working, eventlistener not activating. 
+
+// const checkboxes = document.querySelector('checkbox')
+// Array.from(checkboxes).forEach((element) =>{
+//     element.addEventListener('click', alert("Clicked!"))
 // })
 
-// async function seen () {
+// async function seen() {
+//     console.log("started")
 //     const checked = this.checked
 //     try{
 //         const response = await fetch ('checkbox', {
