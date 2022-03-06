@@ -1,11 +1,8 @@
 # My Awesome Project
 This application takes a movie input along with a rating and creates a sorted list of movies to watch in order of importance. 
 
-http://127.0.0.1:5500/images/codePreview1.gif
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
-
-![alt tag](http://placecorgi.com/1200/650)
+![alt text](http://127.0.0.1:5500/images/codePreview1.gif)
 
 ## How It's Made:
 
