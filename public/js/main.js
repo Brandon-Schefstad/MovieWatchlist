@@ -36,9 +36,6 @@ const seen = document.querySelector('.seen')
 Array.from(seen).forEach((element) =>{
     element.addEventListener('click', alert)
 })
-async function alert() {
-    console.log('works!')
-}
 // async function seen() {
 //     console.log("started")
 //     const checked = this.checked
