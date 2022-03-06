@@ -2,7 +2,7 @@
 This application takes a movie input along with a rating and creates a sorted list of movies to watch in order of importance. 
 
 
-![alt text](https://imgur.com/a/JHNRphG)
+![alt text](/images/codePreview1.gif)
 
 ## How It's Made:
 
