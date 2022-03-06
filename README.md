@@ -1,5 +1,5 @@
 # My Awesome Project
-This application takes a movie input along with a rating and creates a sorted list of movies to watch in order of importance. 
+This application takes a movie input along with a rating and creates a sorted list of movies to watch in order of importance. Users are able to click that they have seen a movie, which updates its priority to -1 and crosses it out.
 
 
 ![alt text](/images/codePreview1.gif)
@@ -8,16 +8,16 @@ This application takes a movie input along with a rating and creates a sorted li
 
 **Tech used:** HTML, CSS, JavaScript, Node, Heroku, Netlify
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+This code was built on the shell of a basic CRUD infrastructure.  The list elements are created using EJS parsing data from MongoDB. CSS is used for some styling with flexbox. The server is run on Node which updates the database so users can refresh the page without losing content. It is hosted on Netlify. 
 
 ## Optimizations
 *(optional)*
 
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+Right now the site only works for a single individual cluster and does not use any caching or create client-specific lists. 
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+Creating a resource on a server can be either hardcoded or submitted through forms or other inputs. 
 
 ## Examples:
 Take a look at these couple examples that I have in my own portfolio:
