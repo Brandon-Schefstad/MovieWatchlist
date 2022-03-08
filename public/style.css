@@ -54,7 +54,7 @@ li{
 .name {
     text-decoration: underline;
 }
-.del, .seen {
+.del, .seenButton {
     display:inline-block;
     border: 1.5px solid #023047;
     background-color: #CC6D00;
@@ -68,6 +68,10 @@ li{
     color:red
 }
 .seen{
+    text-decoration: line-through;
+    color:rgba(48, 46, 16, 0.256)
+}
+.seenButton{
     background-color: #00cc66;
 }
 

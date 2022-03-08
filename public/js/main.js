@@ -32,25 +32,29 @@ async function deleteMovie(){
 
 // PUT function not working, eventlistener not activating on click but by default. 
 
-const seen = document.querySelector('.seen')
+const seen = document.querySelectorAll('.seenButton')
 Array.from(seen).forEach((element) =>{
-    element.addEventListener('click', alert)
+    element.addEventListener('click', seenMovie)
 })
-// async function seen() {
-//     console.log("started")
-//     const checked = this.checked
-//     try{
-//         const response = await fetch ('checkbox', {
-//             method: 'put',
-//             headers: {'Content-Type': 'application/json'},
-//             body: JSON.stringify({
-//                 'checkbox': checked,
-//             })
-//         })
-//     const data = await response.json()
-//     console.log(data)
-//     location.reload()
-//     }catch {
-//         error 
-//     }
-// }
+
+
+async function seenMovie() {
+    console.log("started")
+    const movieNameS = this.parentNode.childNodes[1].innerText
+    const importance = this.parentNode.childNodes[4].innerText
+    try{
+        const response = await fetch ('checkbox', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                'movieName': movieNameS,
+                'importance': importance,
+            })
+        })
+    const data = await response.json()
+    console.log(data)
+    location.reload(true)
+    }catch (error) {
+        console.log(error)
+    }
+}

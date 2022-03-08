@@ -55,12 +55,21 @@ app.delete('/deleteMovie', (request,response) => {
 
 //Post request to update checkboxes
 app.put ('/checkbox', (request, response) => {
-    db.collection('MovieWatchlist').updateOne({movieName: request.body.movieNameS}, {
+    db.collection('MovieWatchlist').updateOne({"movieName": request.body.movieName, "importance": request.body.importance}, {
         $set: {
-            checkbox: request.body.checkbox.checked
+            importance: -1,
+            checkbox: "Seen",
         }
+        }, {
+            sort: {_id: -1},
+            upsert: false
+        })
+        .then(result => {
+            console.log('Marked Complete')
+            response.json('Marked Complete')
+        })
+        .catch(error => console.error(error))
     })
-})
 
 
 //Ports

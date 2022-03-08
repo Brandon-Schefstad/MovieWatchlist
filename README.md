@@ -13,7 +13,9 @@ This code was built on the shell of a basic CRUD infrastructure.  The list eleme
 ## Optimizations
 *(optional)*
 
-Right now the site only works for a single individual cluster and does not use any caching or create client-specific lists. 
+Right now the site only works for a single individual cluster and does not use any caching to create client-specific lists. 
+
+Need to add functionality for hovering cross-out and cross-out after being seen. 
 
 ## Lessons Learned:
 

@@ -19,13 +19,15 @@
         <% for (let i=0; i < info.length; i++){%>
             <li class="movie">
                 <% if(info[i].checkbox === "Not Seen"){%>
-                    <span class="notSeen"><%= info[i].movieName %></span>
+                    <span class="notSeen movieName"><%= info[i].movieName %></span>
+                    <span>-   Priority: </span><span class="rating"><%= info[i].importance %></span>
+                    <span class="seenButton">Seen it!</span>
+                    <span class="del">Delete</span>
                 <%}else{ %>
-                    <span class="seen"><%= info[i].movieName %></span>
+                    <span class="seen movieName"><%= info[i].movieName %></span>
+                    <span class="del">Delete</span>
                 <%} %>
-                <span class="rating">-   Priority: <%= info[i].importance %></span>
-                <span class="seen">Seen it!</span>
-                <span class="del">Delete</span>
+
             </li>
             <% } %>
     </ul>
