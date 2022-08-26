@@ -22,14 +22,5 @@ Need to add functionality for hovering cross-out and cross-out after being seen.
 
 Creating a resource on a server can be either hardcoded or submitted through forms or other inputs. 
 
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
-
-**Palettable:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel
-
 
 
