@@ -3,6 +3,7 @@ This application takes a movie input along with a rating and creates a sorted li
 
 
 ![alt text](/images/codePreview1.gif)
+[Live Site] https://movie-watchlist2.herokuapp.com/
 
 ## How It's Made:
 
